@@ -48,7 +48,7 @@ while menu_choice != 'Z':
                         'Type the letter for the information you want:\n'
                         'A: All lessons on a Monday\n'
                         'B: All lessons on a Wednesday\n'
-                        'C: Information on parent that owe you money\n'
+                        'C: Information on parents that owe you money\n'
                         'D: All lessons on a certain day\n'
                         'E: All students of a certain instrument\n'
                         'F: All data\n'
