@@ -1,6 +1,7 @@
 # Import the libraries to connect to the database and present the information in tables
 import sqlite3
 from tabulate import tabulate
+from easygui import *
 
 # This is the filename of the database to be used
 DB_NAME = 'music_lessons.db'
@@ -48,10 +49,11 @@ while menu_choice != 'Z':
                         'Type the letter for the information you want:\n'
                         'A: All lessons on a Monday\n'
                         'B: All lessons on a Wednesday\n'
-                        'C: Information on parents that owe you money\n'
+                        'C: Information on parent that owe you money\n'
                         'D: All lessons on a certain day\n'
                         'E: All students of a certain instrument\n'
-                        'F: All data\n'
+                        'F: Total money of parents owed added together\n'
+                        'G: All data\n'
                         'Z: Exit\n\n' 
                         'Type option here: ')
     menu_choice = menu_choice.upper()
@@ -68,5 +70,7 @@ while menu_choice != 'Z':
          instrument = input('What instruments do you want to see? ')
          print_parameter_query("child_first, parent_name, school, parent_phone, time, day", "instrument = ? ORDER BY birth_date DESC",instrument)    
     elif menu_choice == 'F':
+         print_query('Total  money that people owe')
+    elif menu_choice == 'G':
          print_query('tests')
          #final  code
